@@ -1,0 +1,4788 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 63,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 41,
+      "panels": [],
+      "title": "Overview - Caio Btu",
+      "type": "row"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 0,
+        "y": 1
+      },
+      "id": 37,
+      "options": {
+        "content": "<center><img src=\"https://d3ik27cqx8s5ub.cloudfront.net/bt/img/Logo.svg\" width=\"500px\"/></center>   ",
+        "mode": "html"
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 11,
+        "x": 9,
+        "y": 1
+      },
+      "id": 39,
+      "options": {
+        "content": "<center><img src=\"https://i.ibb.co/b7jGfn6/Sonic-Wall-NSA-3700.png\" width=\"700px\"/></center>",
+        "mode": "html"
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 1
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:92",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Primary"
+              ],
+              "text": "setAlias(Primary)"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Primario"
+          },
+          "item": {
+            "filter": "UpTime"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:113",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                " Secondary"
+              ],
+              "text": "setAlias( Secondary)"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Secundario"
+          },
+          "item": {
+            "filter": "UpTime"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Uptime",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "left",
+            "displayMode": "auto",
+            "filterable": false
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "Primary",
+              "to": "",
+              "type": 1,
+              "value": "2CB8EDBD6540"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Secundary",
+              "to": "",
+              "type": 1,
+              "value": "2CB8EDBD57C6"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "Sonicwall in Utilization",
+              "to": "",
+              "type": 1,
+              "value": "Sonicwall Serial Number"
+            },
+            {
+              "from": "",
+              "id": 4,
+              "text": "null",
+              "to": "",
+              "type": 1,
+              "value": ""
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Field"
+            },
+            "properties": [
+              {
+                "id": "custom.displayMode",
+                "value": "color-text"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 0,
+        "y": 4
+      },
+      "id": 7,
+      "options": {
+        "frameIndex": 1,
+        "showHeader": false,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Sonicwall Serial Number"
+          }
+        ]
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Sonicwall Model"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 2,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Firmware Version"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 2,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Sonicwall Serial Number"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 2,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Informations",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 75
+              },
+              {
+                "color": "red",
+                "value": 90
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 8,
+        "y": 4
+      },
+      "id": 20,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Memory User"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Memory Used",
+      "type": "gauge"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 3,
+        "w": 13,
+        "x": 11,
+        "y": 4
+      },
+      "hiddenSeries": false,
+      "id": 21,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Memory User"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory Used",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:7013",
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:7014",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 15000
+              },
+              {
+                "color": "red",
+                "value": 20000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 8,
+        "y": 7
+      },
+      "id": 15,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Current Connections"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Active Connections",
+      "type": "stat"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 4,
+        "w": 13,
+        "x": 11,
+        "y": 7
+      },
+      "hiddenSeries": false,
+      "id": 17,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Current Connections"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Active Connections",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:7013",
+          "format": "string",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:7014",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "datasource": "Infinity",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "left",
+            "filterable": true
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "-",
+              "to": "",
+              "type": 1,
+              "value": "null"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": ""
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 8
+      },
+      "id": 33,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Expiration"
+          }
+        ]
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "columns": [],
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "https://172.16.1.150:4443/api/sonicos/reporting/license/security-services",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Licenses",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "expiration",
+                "security_service",
+                "security_status"
+              ]
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {
+              "expiration": 2,
+              "security_service": 0,
+              "security_status": 1
+            },
+            "renameByName": {
+              "expiration": "Expiration",
+              "security_service": "Service",
+              "security_status": "Status"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": null,
+      "description": "Máx.: 750000",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "max": 200000,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 95000
+              },
+              {
+                "color": "red",
+                "value": 150000
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 8,
+        "y": 11
+      },
+      "id": 32,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "DPI SSL Current"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "DLPI-SSL - States Connections",
+      "type": "gauge"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 13,
+        "x": 11,
+        "y": 11
+      },
+      "hiddenSeries": false,
+      "id": 19,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:13168",
+          "alias": "Data Plane",
+          "color": "#5794F2"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:240",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Data Plane"
+              ],
+              "text": "setAlias(Data Plane)"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Current CPU Util DataPlane"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:261",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Management Plane"
+              ],
+              "text": "setAlias(Management Plane)"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Current CPU Util .Management Plane"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU Used",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:11885",
+          "decimals": null,
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": "100",
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:11886",
+          "decimals": null,
+          "format": "short",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 16
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:528",
+          "alias": "Out X0 (LAN)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:911",
+          "alias": "Out X4 (LB)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:918",
+          "alias": "Out X22 (HA-Link)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:925",
+          "alias": "Out X23 (HA Data Link)",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9572",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0 (LAN)"
+              ],
+              "text": "setAlias(In X0 (LAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0 (LAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9593",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X4 (LB)"
+              ],
+              "text": "setAlias(In X4 (LB))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X4 (LB)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9614",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X22 (HA-Link)"
+              ],
+              "text": "setAlias(In X22 (HA-Link))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X22 (HA-Link)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9635",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X23 (HA Data Link)"
+              ],
+              "text": "setAlias(In X23 (HA Data Link))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X23 (HA Data Link)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9656",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0 (LAN)"
+              ],
+              "text": "setAlias(Out X0 (LAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0 (LAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9677",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X4 (LB)"
+              ],
+              "text": "setAlias(Out X4 (LB))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X4 (LB)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "F",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9698",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X22 (HA-Link)"
+              ],
+              "text": "setAlias(Out X22 (HA-Link))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X22 (HA-Link)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:9719",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X23 (HA Data Link)"
+              ],
+              "text": "setAlias(Out X23 (HA Data Link))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X23 (HA Data Link)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "H",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [
+        {
+          "$$hashKey": "object:930",
+          "colorMode": "background6",
+          "fill": true,
+          "fillColor": "rgba(234, 112, 112, 0.12)",
+          "line": false,
+          "lineColor": "rgba(237, 46, 24, 0.60)",
+          "op": "time"
+        }
+      ],
+      "timeShift": null,
+      "title": "LAN Networks Traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:992",
+          "format": "bps",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:993",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 16
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:1589",
+          "alias": "Out X1 (WAN)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1596",
+          "alias": "Out X2 (WAN)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1603",
+          "alias": "Out X3 (WAN)",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:10214",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X1 (WAN)"
+              ],
+              "text": "setAlias(In X1 (WAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X1 (WAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:10235",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X2 (WAN)"
+              ],
+              "text": "setAlias(In X2 (WAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X2 (WAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:10256",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X3 (WAN)"
+              ],
+              "text": "setAlias(In X3 (WAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X3 (WAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:10277",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X1 (WAN)"
+              ],
+              "text": "setAlias(Out X1 (WAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X1 (WAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:10298",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X2 (WAN)"
+              ],
+              "text": "setAlias(Out X2 (WAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X2 (WAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:10319",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X3 (WAN)"
+              ],
+              "text": "setAlias(Out X3 (WAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X3 (WAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "F",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "WAN Networks Traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 16
+      },
+      "hiddenSeries": false,
+      "id": 5,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:1204",
+          "alias": "Out X0:V2 (WIFI VISITANTES)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1211",
+          "alias": "Out X0:V3 (CAMERAS CAIO)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1218",
+          "alias": "Out X0:V6 (Estudo)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1225",
+          "alias": "Out X0:V8 (VISITANTES_LAN)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1232",
+          "alias": "Out X0:V62 (BEEHOME)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1239",
+          "alias": "Out X0:V65 (WIFI SISTEMAS)",
+          "transform": "negative-Y"
+        },
+        {
+          "$$hashKey": "object:1246",
+          "alias": "Out X0:V70 (BLE)",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11351",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V2 (WIFI VISITANTES)"
+              ],
+              "text": "setAlias(In X0:V2 (WIFI VISITANTES))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V2 (WIFI VISITANTES)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11372",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V3 (CAMERAS CAIO)"
+              ],
+              "text": "setAlias(In X0:V3 (CAMERAS CAIO))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V3 (CAMERAS CAIO)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11393",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V6 (Estudo)"
+              ],
+              "text": "setAlias(In X0:V6 (Estudo))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V6 (Estudo)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11414",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V8 (VISITANTES_LAN)"
+              ],
+              "text": "setAlias(In X0:V8 (VISITANTES_LAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V8 (VISITANTES_LAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11435",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V62 (BEEHOME)"
+              ],
+              "text": "setAlias(In X0:V62 (BEEHOME))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V62 (BEEHOME)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11456",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V65 (WIFI SISTEMAS)"
+              ],
+              "text": "setAlias(In X0:V65 (WIFI SISTEMAS))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V65 (WIFI SISTEMAS)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "F",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11477",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "In X0:V70 (BLE)"
+              ],
+              "text": "setAlias(In X0:V70 (BLE))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Incoming Traffic on interface X0:V70 (BLE)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11498",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V2 (WIFI VISITANTES)"
+              ],
+              "text": "setAlias(Out X0:V2 (WIFI VISITANTES))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V2 (WIFI VISITANTES)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "H",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11519",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V3 (CAMERAS CAIO)"
+              ],
+              "text": "setAlias(Out X0:V3 (CAMERAS CAIO))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V3 (CAMERAS CAIO)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "I",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11540",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V6 (Estudo)"
+              ],
+              "text": "setAlias(Out X0:V6 (Estudo))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V6 (Estudo)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "J",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11561",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V8 (VISITANTES_LAN)"
+              ],
+              "text": "setAlias(Out X0:V8 (VISITANTES_LAN))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V8 (VISITANTES_LAN)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "K",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11582",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V62 (BEEHOME)"
+              ],
+              "text": "setAlias(Out X0:V62 (BEEHOME))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V62 (BEEHOME)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "L",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11603",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V65 (WIFI SISTEMAS)"
+              ],
+              "text": "setAlias(Out X0:V65 (WIFI SISTEMAS))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V65 (WIFI SISTEMAS)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "M",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:11624",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Out X0:V70 (BLE)"
+              ],
+              "text": "setAlias(Out X0:V70 (BLE))"
+            }
+          ],
+          "group": {
+            "filter": "Ativos de Rede"
+          },
+          "host": {
+            "filter": "SonicWall - Cluster"
+          },
+          "item": {
+            "filter": "Outgoing Traffic on interface X0:V70 (BLE)"
+          },
+          "options": {
+            "disableDataAlignment": true,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "N",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "VLAN Networks Traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "id": 43,
+      "panels": [
+        {
+          "datasource": "Infinity",
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "custom": {
+                "align": "left",
+                "filterable": true
+              },
+              "displayName": "-",
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-blue",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "User"
+                },
+                "properties": [
+                  {
+                    "id": "custom.displayMode",
+                    "value": "color-background"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Status"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 122
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "New Value"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 297
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Old Value"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 90
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "User"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 158
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Time"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 175
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Source"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 158
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 24
+          },
+          "id": 25,
+          "options": {
+            "showHeader": true,
+            "sortBy": []
+          },
+          "pluginVersion": "7.3.4",
+          "targets": [
+            {
+              "columns": [],
+              "filters": [],
+              "format": "table",
+              "global_query_id": "",
+              "refId": "A",
+              "root_selector": "",
+              "source": "url",
+              "type": "json",
+              "url": "https://172.16.1.150:4443/api/sonicos/log/audit/view",
+              "url_options": {
+                "data": "",
+                "method": "GET"
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Audit View",
+          "transformations": [
+            {
+              "id": "filterFieldsByName",
+              "options": {
+                "include": {
+                  "names": [
+                    "description",
+                    "destination",
+                    "group_index",
+                    "group_name",
+                    "id",
+                    "interface",
+                    "mode",
+                    "new_value",
+                    "old_value",
+                    "session",
+                    "source",
+                    "status",
+                    "time",
+                    "transaction_id",
+                    "user",
+                    "uuid"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "description": false,
+                  "destination": true,
+                  "group_name": true,
+                  "id": true,
+                  "interface": true,
+                  "last_modified_by": false,
+                  "mode": true,
+                  "new_value": false,
+                  "session": true,
+                  "transaction_id": true,
+                  "up_time": true,
+                  "uuid": true
+                },
+                "indexByName": {
+                  "description": 1,
+                  "destination": 2,
+                  "group_index": 3,
+                  "group_name": 4,
+                  "id": 5,
+                  "interface": 6,
+                  "mode": 7,
+                  "new_value": 8,
+                  "old_value": 9,
+                  "session": 10,
+                  "source": 11,
+                  "status": 12,
+                  "time": 13,
+                  "transaction_id": 14,
+                  "user": 0,
+                  "uuid": 15
+                },
+                "renameByName": {
+                  "description": "Description",
+                  "group_index": "Alter Type",
+                  "new_value": "New Value",
+                  "old_value": "Old Value",
+                  "source": "Source",
+                  "status": "Status",
+                  "time": "Time",
+                  "user": "User"
+                }
+              }
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "datasource": null,
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {},
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "DOWN",
+                  "to": "",
+                  "type": 1,
+                  "value": "0"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 0
+                  },
+                  {
+                    "color": "green",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 2,
+            "w": 24,
+            "x": 0,
+            "y": 32
+          },
+          "id": 45,
+          "options": {
+            "colorMode": "value",
+            "graphMode": "none",
+            "justifyMode": "center",
+            "orientation": "vertical",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.3.4",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:128",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Busscar"
+                  ],
+                  "text": "setAlias(Busscar)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - BUSSCAR"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:149",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Caio Barra"
+                  ],
+                  "text": "setAlias(Caio Barra)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - CAIO BARRA"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:170",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Caio CT"
+                  ],
+                  "text": "setAlias(Caio CT)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - CAIO CT"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "C",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:191",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Caio SP"
+                  ],
+                  "text": "setAlias(Caio SP)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - CAIO SP"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "D",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:212",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "CIGC"
+                  ],
+                  "text": "setAlias(CIGC)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - CIGC"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "E",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:233",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Inbrasp Matriz"
+                  ],
+                  "text": "setAlias(Inbrasp Matriz)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - INBRASP MATRIZ"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "G",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:254",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Inbrasp Betim"
+                  ],
+                  "text": "setAlias(Inbrasp Betim)"
+                }
+              ],
+              "group": {
+                "filter": "VPNs/Links"
+              },
+              "host": {
+                "filter": "VPNs - LOADBALANCE"
+              },
+              "item": {
+                "filter": "ICMP ping - BETIM"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "F",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "VPN - Loadbalance",
+          "transformations": [],
+          "type": "stat"
+        },
+        {
+          "datasource": null,
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "fixedColor": "green",
+                "mode": "fixed"
+              },
+              "custom": {},
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 2,
+            "w": 12,
+            "x": 0,
+            "y": 34
+          },
+          "id": 28,
+          "options": {
+            "colorMode": "value",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "value"
+          },
+          "pluginVersion": "7.3.4",
+          "targets": [
+            {
+              "application": {
+                "filter": "Sonicwall General"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Ativos de Rede"
+              },
+              "host": {
+                "filter": "SonicWall - Cluster"
+              },
+              "item": {
+                "filter": "SSLVPN - Qtd. Users"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "SSLVPN - Connected Users",
+          "type": "stat"
+        },
+        {
+          "datasource": "Infinity",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {
+                "align": "left",
+                "filterable": true
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "semi-dark-blue",
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "user_name"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "User"
+                  },
+                  {
+                    "id": "custom.displayMode",
+                    "value": "color-background"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "logged_in"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Moment Login"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "login_time"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Uptime"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "client_virtual_ip"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Virtual IP"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "client_wan_ip"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "User IP"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "inactivity_time"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Downtime"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Momento Login"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 177
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Tempo de Conexão"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 154
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Tempo de Inatividade"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 161
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "IP Virtual"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 96
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "IP do Usuário"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 156
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "User"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 103
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Uptime"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 107
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Downtime"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 105
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Virtual IP"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 97
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "User IP"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 140
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 12,
+            "y": 34
+          },
+          "id": 23,
+          "options": {
+            "showHeader": true,
+            "sortBy": []
+          },
+          "pluginVersion": "7.3.4",
+          "targets": [
+            {
+              "columns": [],
+              "filters": [],
+              "format": "table",
+              "global_query_id": "",
+              "refId": "A",
+              "root_selector": "",
+              "source": "url",
+              "type": "json",
+              "url": "https://172.16.1.150:4443/api/sonicos/reporting/ssl-vpn/sessions",
+              "url_options": {
+                "data": "",
+                "method": "GET"
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "SSLVPN - Connected Users",
+          "transformations": [
+            {
+              "id": "filterFieldsByName",
+              "options": {
+                "include": {
+                  "names": [
+                    "client_virtual_ip",
+                    "client_wan_ip",
+                    "logged_in",
+                    "login_time",
+                    "user_name",
+                    "inactivity_time"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "client_virtual_ip": 4,
+                  "client_wan_ip": 5,
+                  "inactivity_time": 3,
+                  "logged_in": 1,
+                  "login_time": 2,
+                  "user_name": 0
+                },
+                "renameByName": {}
+              }
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {
+                "align": null,
+                "filterable": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "fill": 2,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 6,
+            "w": 12,
+            "x": 0,
+            "y": 36
+          },
+          "hiddenSeries": false,
+          "id": 30,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.3.4",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Sonicwall General"
+              },
+              "cacheDurationSeconds": 300,
+              "fields": [
+                {
+                  "jsonPath": ""
+                }
+              ],
+              "functions": [],
+              "group": {
+                "filter": "Ativos de Rede"
+              },
+              "host": {
+                "filter": "SonicWall - Cluster"
+              },
+              "item": {
+                "filter": "SSLVPN - Qtd. Users"
+              },
+              "method": "GET",
+              "options": {
+                "disableDataAlignment": true,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryParams": "",
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "urlPath": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "SSLVPN - Connected Users",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:230",
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:231",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "title": "Audit - Caio Btu",
+      "type": "row"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Overview - Sonicwall (Caio Btu)",
+  "uid": "bolKFC_Vz",
+  "version": 98
+}
