@@ -1,0 +1,978 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-12-29T15:43:19Z",
+        "groups": [
+            {
+                "uuid": "89846c72b3e5499a8e46df915375688f",
+                "name": "Templates Grupo Caio"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "fa335e57b9304f1daf64df426709ef90",
+                "template": "SNMP Sonicwall",
+                "name": "SNMP Sonicwall",
+                "groups": [
+                    {
+                        "name": "Templates Grupo Caio"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "c01edca0031c4a9a844ed2953724dedb",
+                        "name": "Active Connections Max",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.1.0",
+                        "key": "ActiveConnectionsMax",
+                        "status": "DISABLED"
+                    },
+                    {
+                        "uuid": "d325ff22448748adae5ab147bc7f6cd5",
+                        "name": "DPI SSL Current",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.5.1.0",
+                        "key": "DPISSLCurrent",
+                        "delay": "5m"
+                    },
+                    {
+                        "uuid": "26b28c7f78ce419ba2d64b6f8bfc1b32",
+                        "name": "DPI SSL Max",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.5.3.0",
+                        "key": "DPISSLMax",
+                        "delay": "2h"
+                    },
+                    {
+                        "uuid": "a8adef1d19df45d69008fe955e1b95be",
+                        "name": "JSON - Users SSLVPN",
+                        "type": "HTTP_AGENT",
+                        "key": "json.qtd.sslvpn",
+                        "delay": "3m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "infoadmin",
+                        "password": "PASSWORD",
+                        "timeout": "15s",
+                        "url": "https://172.16.1.150:4443/api/sonicos/reporting/ssl-vpn/sessions",
+                        "output_format": "JSON"
+                    },
+                    {
+                        "uuid": "e4e05eb906e6442ea62211878f4ac77b",
+                        "name": "JSON - Users SSLVPN (Inbrasp Betim)",
+                        "type": "HTTP_AGENT",
+                        "key": "json.qtd.sslvpn.betim",
+                        "delay": "3m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "infoadmin",
+                        "password": "PASSWORD",
+                        "timeout": "15s",
+                        "url": "https://192.168.253.1:4443/api/sonicos/reporting/ssl-vpn/sessions",
+                        "output_format": "JSON"
+                    },
+                    {
+                        "uuid": "afdd7802033544679d60ca1963d22a85",
+                        "name": "SSLVPN - Qtd. Users",
+                        "type": "DEPENDENT",
+                        "key": "json.qtd.sslvpn.qtdusers",
+                        "delay": "0",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.body..user_name.length()"
+                                ]
+                            },
+                            {
+                                "type": "JAVASCRIPT",
+                                "parameters": [
+                                    "var numConvertido = parseInt(value);\nreturn numConvertido"
+                                ]
+                            }
+                        ],
+                        "master_item": {
+                            "key": "json.qtd.sslvpn"
+                        }
+                    },
+                    {
+                        "uuid": "4f3438f971ca445ba7d3b7325b58e863",
+                        "name": "SSLVPN - Qtd. Users (Inbrasp Betim)",
+                        "type": "DEPENDENT",
+                        "key": "json.qtd.sslvpn.qtdusers.betim",
+                        "delay": "0",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.body..user_name.length()"
+                                ]
+                            },
+                            {
+                                "type": "JAVASCRIPT",
+                                "parameters": [
+                                    "var numConvertido = parseInt(value);\nreturn numConvertido"
+                                ]
+                            }
+                        ],
+                        "master_item": {
+                            "key": "json.qtd.sslvpn.betim"
+                        }
+                    },
+                    {
+                        "uuid": "afb7aab7b3744429bbdfdfca50ef073b",
+                        "name": "LDAP Servers Health - 172.16.1.20",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.172.16.1.20",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/ldap-statistic/servers/name/172.16.1.20",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "477687462d974f3d9a5fa640885dbbdf",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.172.16.1.20,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.172.16.1.20,15m)=1",
+                                "name": "Server Ldap Health Problem - 172.16.1.20",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "1f52247e1b44461cbd6bc0b623f99049",
+                        "name": "LDAP Servers Health - 172.16.1.21",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.172.16.1.21",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/ldap-statistic/servers/name/172.16.1.21",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "ede01b42b1e948afbaf9aedbde858f6c",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.172.16.1.21,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.172.16.1.21,15m)=1",
+                                "name": "Server Ldap Health Problem - 172.16.1.21",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "5e449932b00c4470867874e2607983bd",
+                        "name": "LDAP Servers Health - 172.16.1.22",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.172.16.1.22",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/ldap-statistic/servers/name/172.16.1.22",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "00f4f8d18d1040bfa504038ab87c3ef9",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.172.16.1.22,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.172.16.1.22,15m)=1",
+                                "name": "Server Ldap Health Problem - 172.16.1.22",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "19154fb56168408c95abae9372debc07",
+                        "name": "LDAP Servers Health - 172.16.140.1",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.172.16.140.1",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/ldap-statistic/servers/name/172.16.140.1",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "f4832b74723d4a4d88ed0e6f64bd56b1",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.172.16.140.1,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.172.16.140.1,15m)=1",
+                                "name": "Server Ldap Health Problem - 172.16.140.1",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "734070a96b6e46dd942948b19214bac3",
+                        "name": "LDAP Servers Health - 172.16.140.2",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.172.16.140.2",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/ldap-statistic/servers/name/172.16.140.2",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "5e864a532f314c7f956a9d73d5358219",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.172.16.140.2,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.172.16.140.2,15m)=1",
+                                "name": "Server Ldap Health Problem - 172.16.140.2",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "b04e8441c3db4c758eb0fd5b3e8f7bda",
+                        "name": "LDAP Servers Health - 172.16.150.253",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.172.16.150.253",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "infoadmin",
+                        "password": "PASSWORD",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://192.168.253.1:4443/api/sonicos/reporting/ldap-statistic/servers/name/172.16.150.253",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "dff7bf17e31d48c7b51ef2090e2c8658",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.172.16.150.253,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.172.16.150.253,15m)=1",
+                                "name": "Server Ldap Health Problem - 172.16.150.253",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f955c0186157416285bcfcd0f78bf6f9",
+                        "name": "LDAP Servers Health - 192.168.253.2",
+                        "type": "HTTP_AGENT",
+                        "key": "ldap.servers.health.192.168.253.2",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "infoadmin",
+                        "password": "PASSWORD",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://192.168.253.1:4443/api/sonicos/reporting/ldap-statistic/servers/name/192.168.253.2",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "cfe0dca962a341dda841b3e21e920822",
+                                "expression": "last(/SNMP Sonicwall/ldap.servers.health.192.168.253.2,#3)<>\"up\" or nodata(/SNMP Sonicwall/ldap.servers.health.192.168.253.2,15m)=1",
+                                "name": "Server Ldap Health Problem - 192.168.253.2",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "a3b1c20574bc4a03929add8bfecfd8fa",
+                        "name": "Log Audit View",
+                        "type": "HTTP_AGENT",
+                        "key": "LogAuditView",
+                        "trends": "0",
+                        "status": "DISABLED",
+                        "value_type": "TEXT",
+                        "authtype": "DIGEST",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/log/audit/view"
+                    },
+                    {
+                        "uuid": "02d0b5e9dcda48ba9165efc5da7bb6f4",
+                        "name": "Report System",
+                        "type": "HTTP_AGENT",
+                        "key": "ReportSystem",
+                        "trends": "0",
+                        "status": "DISABLED",
+                        "value_type": "TEXT",
+                        "authtype": "DIGEST",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/status/system"
+                    },
+                    {
+                        "uuid": "395d9a791307454e96ab06b50841b961",
+                        "name": "Current Connections",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.2.0",
+                        "key": "sonicCurrentConnCacheEntries.0",
+                        "delay": "30s",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "SonicWall Performance"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "09ad4bb373444341a695fdc524c13ad7",
+                        "name": "Memory User",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.4.0",
+                        "key": "sonicCurrentRAMUtil.0",
+                        "delay": "10m",
+                        "units": "%",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "SonicWall Performance"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "1933a0bb20914113b7ef035b1278b3a7",
+                        "name": "Sonicwall in Utilization",
+                        "type": "DEPENDENT",
+                        "key": "sonicwall.in.utilization",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "preprocessing": [
+                            {
+                                "type": "STR_REPLACE",
+                                "parameters": [
+                                    "2CB8EDBD6540",
+                                    "Primary"
+                                ]
+                            },
+                            {
+                                "type": "STR_REPLACE",
+                                "parameters": [
+                                    "2CB8EDBD57C6",
+                                    "Secondary"
+                                ]
+                            },
+                            {
+                                "type": "STR_REPLACE",
+                                "parameters": [
+                                    "18C2413F56E0",
+                                    "Primary"
+                                ]
+                            },
+                            {
+                                "type": "STR_REPLACE",
+                                "parameters": [
+                                    "18C2413F56C0",
+                                    "Secondary"
+                                ]
+                            }
+                        ],
+                        "master_item": {
+                            "key": "SysmSerialNumber"
+                        }
+                    },
+                    {
+                        "uuid": "ec377c3b31c5466891cf74d48d3777d2",
+                        "name": "Current CPU Util",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.3.0",
+                        "key": "sonicwallCurrentCPUUtil",
+                        "delay": "3m",
+                        "value_type": "FLOAT",
+                        "units": "%",
+                        "preprocessing": [
+                            {
+                                "type": "CHANGE_PER_SECOND",
+                                "parameters": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "100"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "SonicWall Performance"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "6d6a26677f264dca9f086326af505b88",
+                                "expression": "avg(/SNMP Sonicwall/sonicwallCurrentCPUUtil,#5)>95",
+                                "name": "Sonicwall {HOSTNAME} - Usage of CPU over 95%",
+                                "priority": "AVERAGE",
+                                "description": "CPU activity on Sonicwall is more than 95% during the last five checks"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "9d0d7fc41c534bcc9e3b01354a21f300",
+                        "name": "Current CPU Util DataPlane",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.7.0",
+                        "key": "sonicwallCurrentCPUUtilDataPlane",
+                        "delay": "30s",
+                        "value_type": "FLOAT",
+                        "units": "%",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "SonicWall Performance"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3865ac1b880b4e1fbb2ab9d86e51f1d1",
+                        "name": "Current CPU Util .Management Plane",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.6.0",
+                        "key": "sonicwallCurrentCPUUtilManagementPlane",
+                        "delay": "30s",
+                        "value_type": "FLOAT",
+                        "units": "%",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "SonicWall Performance"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "51579caf393d4caf8680a5140b980ab5",
+                        "name": "Current RAM Usage",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.1.3.1.4.0",
+                        "key": "sonicwallCurrentRAMUtil",
+                        "delay": "10m",
+                        "value_type": "FLOAT",
+                        "units": "%",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "SonicWall Performance"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "1c2f5012c3c34fa28a0960f89f37e1c6",
+                                "expression": "avg(/SNMP Sonicwall/sonicwallCurrentRAMUtil,#5)>100",
+                                "name": "Sonicwall {HOSTNAME} - Memory Usage Over 100%",
+                                "priority": "AVERAGE",
+                                "description": "Memory usage on Sonicwall is more than 100% during the last five checks"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f4ff8c49d11a4c139d8ca6a0f6b236ab",
+                        "name": "SSOAgent Health - 172.16.1.21",
+                        "type": "HTTP_AGENT",
+                        "key": "sso.agent.health.172.16.1.21",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/sso-statistic/agents/name/172.16.1.21",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "6b94abeebd4f46d7b34bbb30bfdba9d5",
+                                "expression": "last(/SNMP Sonicwall/sso.agent.health.172.16.1.21,#3)<>\"up\" or nodata(/SNMP Sonicwall/sso.agent.health.172.16.1.21,15m)=1",
+                                "name": "SSOAgent Health Problem - 172.16.1.21",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c8775bfd34e54157861d554e5f77c92b",
+                        "name": "SSOAgent Health - 172.16.1.22",
+                        "type": "HTTP_AGENT",
+                        "key": "sso.agent.health.172.16.1.22",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/sso-statistic/agents/name/172.16.1.22",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "a3700c6e4b1c4d4ab13f6a9065ad0d4a",
+                                "expression": "last(/SNMP Sonicwall/sso.agent.health.172.16.1.22,#3)<>\"up\" or nodata(/SNMP Sonicwall/sso.agent.health.172.16.1.22,15m)=1",
+                                "name": "SSOAgent Health Problem - 172.16.1.22",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "01350ec3525546f2bb30d43827ace68f",
+                        "name": "SSOAgent Health - 172.16.1.25",
+                        "type": "HTTP_AGENT",
+                        "key": "sso.agent.health.172.16.1.25",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/sso-statistic/agents/name/172.16.1.25",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "bda3796d5c6e4584bcb0e1710f530a8d",
+                                "expression": "last(/SNMP Sonicwall/sso.agent.health.172.16.1.25,#3)<>\"up\" or nodata(/SNMP Sonicwall/sso.agent.health.172.16.1.25,15m)=1",
+                                "name": "SSOAgent Health Problem - 172.16.1.25",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c0c6293e0f9441919a037e771c1eab90",
+                        "name": "SSOAgent Health - 172.16.140.1",
+                        "type": "HTTP_AGENT",
+                        "key": "sso.agent.health.172.16.140.1",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/sso-statistic/agents/name/172.16.140.1",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "cef708ce980940dbbfe69feaf5ea999b",
+                                "expression": "last(/SNMP Sonicwall/sso.agent.health.172.16.140.1,#3)<>\"up\" or nodata(/SNMP Sonicwall/sso.agent.health.172.16.140.1,15m)=1",
+                                "name": "SSOAgent Health Problem - 172.16.140.1",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c021848ed3e1479d8d0bf49d0a3841e6",
+                        "name": "SSOAgent Health - 172.16.140.2",
+                        "type": "HTTP_AGENT",
+                        "key": "sso.agent.health.172.16.140.2",
+                        "delay": "5m",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "authtype": "BASIC",
+                        "username": "{$APIUSER}",
+                        "password": "{$APIPASS}",
+                        "preprocessing": [
+                            {
+                                "type": "JSONPATH",
+                                "parameters": [
+                                    "$.status"
+                                ]
+                            }
+                        ],
+                        "timeout": "15s",
+                        "url": "https://{$HOST.IP}:{$HOST.PORT}/api/sonicos/reporting/sso-statistic/agents/name/172.16.140.2",
+                        "query_fields": [
+                            {
+                                "name": "select",
+                                "value": "server,status"
+                            }
+                        ],
+                        "triggers": [
+                            {
+                                "uuid": "f40e13eca30e4189a18ca376c47576cb",
+                                "expression": "last(/SNMP Sonicwall/sso.agent.health.172.16.140.2,#3)<>\"up\" or nodata(/SNMP Sonicwall/sso.agent.health.172.16.140.2,15m)=1",
+                                "name": "SSOAgent Health Problem - 172.16.140.2",
+                                "priority": "AVERAGE"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "ea9def03475f44b28278795154db2470",
+                        "name": "Firmware Version",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.2.1.1.3.0",
+                        "key": "SysmFirmwareVersion",
+                        "delay": "12h",
+                        "trends": "0",
+                        "value_type": "CHAR",
+                        "inventory_link": "OS",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "Sonicwall General"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "b593028b18564973ba5320e633b8a207",
+                        "name": "Sonicwall Model",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.2.1.1.1.0",
+                        "key": "SysmModel",
+                        "delay": "24h",
+                        "trends": "0",
+                        "value_type": "CHAR",
+                        "inventory_link": "MODEL",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "Sonicwall General"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "bd5018a367d24e679c285a58d97b1d52",
+                        "name": "Sonicwall Serial Number",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8741.2.1.1.2.0",
+                        "key": "SysmSerialNumber",
+                        "delay": "24h",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "inventory_link": "SERIALNO_A",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "Sonicwall General"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "b4b14aa6a5834427b60878d97f1afc97",
+                        "name": "UpTime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "sysUpTimeInstance",
+                        "delay": "15m",
+                        "units": "uptime",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "0.01"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "Sonicwall General"
+                            }
+                        ]
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "e0357dc938754698a1ca397c2ec43269",
+                        "name": "Interfaces ",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#SNMPVALUE},IF-MIB::ifDescr]",
+                        "key": "sonicwallifDescr",
+                        "delay": "90",
+                        "item_prototypes": [
+                            {
+                                "uuid": "de17d2db2a834a8aba6bef9422e77cab",
+                                "name": "Port Description $1",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "IF-MIB::ifDescr.{#SNMPINDEX}",
+                                "key": "ifDescr.[{#SNMPVALUE}]",
+                                "delay": "12h",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "c8b7f64014da4f1ab394970a18eab11d",
+                                "name": "Incoming Traffic on interface $1",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "IF-MIB::ifInOctets.{#SNMPINDEX}",
+                                "key": "ifInOctets.[{#SNMPVALUE}]",
+                                "delay": "3m",
+                                "units": "bps",
+                                "preprocessing": [
+                                    {
+                                        "type": "CHANGE_PER_SECOND",
+                                        "parameters": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "type": "MULTIPLIER",
+                                        "parameters": [
+                                            "8"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "e4357ec3b3b8461f951a5dbd35e5e219",
+                                "name": "Port Status $1",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "IF-MIB::ifOperStatus.{#SNMPINDEX}",
+                                "key": "ifOperStatus.[{#SNMPVALUE}]",
+                                "delay": "10m"
+                            },
+                            {
+                                "uuid": "eb9478d99fd34498b4a34641d8195cdf",
+                                "name": "Outgoing Traffic on interface $1",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "IF-MIB::ifOutOctets.{#SNMPINDEX}",
+                                "key": "ifOutOctets.[{#SNMPVALUE}]",
+                                "delay": "3m",
+                                "units": "bps",
+                                "preprocessing": [
+                                    {
+                                        "type": "CHANGE_PER_SECOND",
+                                        "parameters": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "type": "MULTIPLIER",
+                                        "parameters": [
+                                            "8"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "graph_prototypes": [
+                            {
+                                "uuid": "77e97d57672a4125938e746b2cca0000",
+                                "name": "Traffic on {#SNMPVALUE}",
+                                "graph_items": [
+                                    {
+                                        "drawtype": "GRADIENT_LINE",
+                                        "color": "1A7C11",
+                                        "item": {
+                                            "host": "SNMP Sonicwall",
+                                            "key": "ifInOctets.[{#SNMPVALUE}]"
+                                        }
+                                    },
+                                    {
+                                        "sortorder": "1",
+                                        "drawtype": "GRADIENT_LINE",
+                                        "color": "F63100",
+                                        "item": {
+                                            "host": "SNMP Sonicwall",
+                                            "key": "ifOutOctets.[{#SNMPVALUE}]"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$APIPASS}",
+                        "type": "SECRET_TEXT"
+                    },
+                    {
+                        "macro": "{$APIUSER}",
+                        "value": "infoadmin"
+                    },
+                    {
+                        "macro": "{$HOST.IP}",
+                        "value": "172.16.1.150"
+                    },
+                    {
+                        "macro": "{$HOST.PORT}",
+                        "value": "4443"
+                    }
+                ]
+            }
+        ],
+        "graphs": [
+            {
+                "uuid": "03f85ab018524600968fc952ad4d798b",
+                "name": "CPU %",
+                "show_work_period": "NO",
+                "graph_items": [
+                    {
+                        "drawtype": "GRADIENT_LINE",
+                        "color": "00AA00",
+                        "item": {
+                            "host": "SNMP Sonicwall",
+                            "key": "sonicwallCurrentCPUUtil"
+                        }
+                    }
+                ]
+            },
+            {
+                "uuid": "39fb08a5ed09454f90e34297d24dc59e",
+                "name": "RAM %",
+                "show_work_period": "NO",
+                "graph_items": [
+                    {
+                        "drawtype": "GRADIENT_LINE",
+                        "color": "C80000",
+                        "item": {
+                            "host": "SNMP Sonicwall",
+                            "key": "sonicwallCurrentRAMUtil"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
